@@ -4,12 +4,12 @@ Jajjamensan va kul!
 
 ## foreach
 
-signatur: foreach(arr, func)\n
-funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen en gång.\n
-Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. 
-Value - värdet som just nu itereras (let element = arr[i])
-Index - index som just nu itereras (i)
-Array - arrayen som funktionen anropats med
+signatur: foreach(arr, func)<br/>
+funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen en gång.<br/>
+Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. <br/>
+Value - värdet som just nu itereras (let element = arr[i])<br/>
+Index - index som just nu itereras (i)<br/>
+Array - arrayen som funktionen anropats med<br/>
 
 ```javascript
 
@@ -26,12 +26,12 @@ function foreach(arr, callback){
 ```
 
 ## map
-signatur: map(arr, func)
-funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att ange nytt värde för dessa. Hur?
-Funktionen ska skapa upp en ny array, iterera över alla element i den arrayen som funktionen anropats med, lägga in ett värdet av den inre funktion som funktionen anropats med samt, slutligen retunera den nyskapade arrayen.
-Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. 
-Value - värdet som just nu itereras (let element = arr[i])
-Index - index som just nu itereras (i)
+signatur: map(arr, func)<br/>
+funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att ange nytt värde för dessa. Hur?<br/>
+Funktionen ska skapa upp en ny array, iterera över alla element i den arrayen som funktionen anropats med, lägga in ett värdet av den inre funktion som funktionen anropats med <br/>samt, slutligen retunera den nyskapade arrayen.<br/>
+Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. <br/>
+Value - värdet som just nu itereras (let element = arr[i])<br/>
+Index - index som just nu itereras (i)<br/>
 Array - arrayen som funktionen anropats med
 
 ```javascript
@@ -84,12 +84,12 @@ function map(arr, callback){
 
 
 ## filter
-signatur: filter(arr, func)
-funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att avgöra huruvida det aktiva elementet ska finnas med i den nya lista eller inte. Hur? Funktionen ska skapa upp en ny array, iterera över alla element i den arrayen som funktionen anropats med, lägga in värdet av elementet i den nya arrayen givet att den uppnår det villkor som definierats i callback-funktionen (input-parameter "func" || inre funktionen). Callback-funktionen bör således returnera ett värde av bolesk typ.
-Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. 
-Value - värdet som just nu itereras (let element = arr[i])
-Index - index som just nu itereras (i)
-Array - arrayen som funktionen anropats med
+signatur: filter(arr, func)<br/>
+funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att avgöra huruvida det aktiva elementet ska finnas med i den nya lista eller inte.<br/> Hur? Funktionen ska skapa upp en ny array, iterera över alla element i den arrayen som funktionen anropats med, lägga in värdet av elementet i den nya arrayen givet att<br/> den uppnår det villkor som definierats i callback-funktionen (input-parameter "func" || inre funktionen). Callback-funktionen bör således returnera ett värde av bolesk typ.<br/>
+Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. <br/>
+Value - värdet som just nu itereras (let element = arr[i])<br/>
+Index - index som just nu itereras (i)<br/>
+Array - arrayen som funktionen anropats med<br/>
 
 ```javascript
 
