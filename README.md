@@ -4,8 +4,8 @@ Jajjamensan va kul!
 
 ## foreach
 
-signatur: foreach(arr, func)
-funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen en gång.
+signatur: foreach(arr, func)\n
+funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen en gång.\n
 Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array. 
 Value - värdet som just nu itereras (let element = arr[i])
 Index - index som just nu itereras (i)
