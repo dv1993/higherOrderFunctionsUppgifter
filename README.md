@@ -11,6 +11,20 @@ Value - värdet som just nu itereras (let element = arr[i])
 Index - index som just nu itereras (i)
 Array - arrayen som funktionen anropats med
 
+```javascript
+
+//Funktionen som ska användas som callback
+let input =[1,23,546,878,23];
+foreach(input, write) //Denna rad ska leda till att elementen i arrayen ovan skrivs ut i konsollen
+function write(val){
+  console.log(val)
+}
+
+function foreach(arr, callback){
+  //Kod här
+}
+```
+
 ## map
 signatur: map(arr, func)
 funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att ange nytt värde för dessa. Hur?
@@ -20,6 +34,55 @@ Value - värdet som just nu itereras (let element = arr[i])
 Index - index som just nu itereras (i)
 Array - arrayen som funktionen anropats med
 
+```javascript
+
+let arr = [
+  
+		{
+      "age":17,
+			"name": {
+				"title": "Mr",
+				"first": "Naël",
+				"last": "Henry"
+			},
+			"email": "Nael.Henry@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":18,
+			"name": {
+				"title": "Miss",
+				"first": "Sara",
+				"last": "Faure"
+			},
+			"email": "Sara.Faure@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":27,
+			"name": {
+				"title": "Mademoiselle",
+				"first": "Christel",
+				"last": "Legrand"
+			},
+			"email": "Christel.Legrand@example.com",
+			"nat": "CH"
+		},
+];
+//resultatet från att anropa map med ovanstående data som input plus getFirstName som callback är denna array: ["Henry", "Sara", "Christel"]
+
+//Funktionen som ska användas som callback
+function getFirstName(person){
+  return person.name.first;
+}
+
+function map(arr, callback){
+  //Kod här
+}
+```
+
+
+
 ## filter
 signatur: filter(arr, func)
 funktion: funktionen ska iterera över alla element i arrayen och köra callback funktionen för att avgöra huruvida det aktiva elementet ska finnas med i den nya lista eller inte. Hur? Funktionen ska skapa upp en ny array, iterera över alla element i den arrayen som funktionen anropats med, lägga in värdet av elementet i den nya arrayen givet att den uppnår det villkor som definierats i callback-funktionen (input-parameter "func" || inre funktionen). Callback-funktionen bör således returnera ett värde av bolesk typ.
@@ -27,6 +90,54 @@ Den inre funktionen ska kunna hantera tre input-parametrar, value, index, array.
 Value - värdet som just nu itereras (let element = arr[i])
 Index - index som just nu itereras (i)
 Array - arrayen som funktionen anropats med
+
+```javascript
+
+let arr = [
+  
+		{
+      "age":17,
+			"name": {
+				"title": "Mr",
+				"first": "Naël",
+				"last": "Henry"
+			},
+			"email": "Nael.Henry@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":18,
+			"name": {
+				"title": "Miss",
+				"first": "Sara",
+				"last": "Faure"
+			},
+			"email": "Sara.Faure@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":27,
+			"name": {
+				"title": "Mademoiselle",
+				"first": "Christel",
+				"last": "Legrand"
+			},
+			"email": "Christel.Legrand@example.com",
+			"nat": "CH"
+		},
+];
+//resultatet från att anropa filter med ovanstående data som input plus isUnderage som callback är en ny array med det endast 
+//det näst sista och sista objektet från arrayen ovan.
+
+//Funktionen som ska användas som callback
+function isOverEighteen(person){
+  return person.age>=18;
+}
+
+function filter(arr, callback){
+  //Kod här
+}
+```
 
 ## reduce
 
@@ -38,3 +149,50 @@ TotalValue - det just nu totala värde av alla element som körts i den inre fun
 Value - värdet som just nu itereras (let element = arr[i])
 Index - index som just nu itereras (i)
 Array - arrayen som funktionen anropats med
+
+```javascript
+
+let arr = [
+  
+		{
+      "age":17,
+			"name": {
+				"title": "Mr",
+				"first": "Naël",
+				"last": "Henry"
+			},
+			"email": "Nael.Henry@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":18,
+			"name": {
+				"title": "Miss",
+				"first": "Sara",
+				"last": "Faure"
+			},
+			"email": "Sara.Faure@example.com",
+			"nat": "FR"
+		},
+		{
+      "age":27,
+			"name": {
+				"title": "Mademoiselle",
+				"first": "Christel",
+				"last": "Legrand"
+			},
+			"email": "Christel.Legrand@example.com",
+			"nat": "CH"
+		},
+];
+//resultatet från att anropa reduce med ovanstående data som input plus sumAges som callback är värdet 62
+
+//Funktionen som ska användas som callback
+function sumAges(currentSum, person){
+  return currentSum + person.age;
+}
+
+function reduce(arr, func, initialValue = null){
+  //Kod här
+}
+```
